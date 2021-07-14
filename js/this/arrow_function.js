@@ -5,24 +5,38 @@
 // var foo = (() => this);
 // console.log(foo() === globalObject); // true
 
+// function example() {
+//     // function body
+// }
+//
+// let ex = () => {
+//
+// }
+
 
 // Свойство this стрелочной функции нельзя переоределить, оно будет всегда указывать
 // на то окружение в котором находится
 
 // Вызов функции как метода объекта
 
-let obj = {
-    name: 'Vova',
-    example: () => {
-        // НЕ ссылается на текущий объект но хранит ссылку на window (global object)
-        console.log(this);
-    }
-}
-
-obj.example();
+// let obj = {
+//     name: 'Vova',
+//     example: () => {
+//         // НЕ ссылается на текущий объект но хранит ссылку на window (global object)
+//         console.log(this);
+//     }
+// }
+//
+// obj.example();
 
 let obj2 = {
-    name: 'alex',
+    name: 'Alex',
+    lastName: 'Shaitan',
+    age: 10,
+    getFullName: function () {
+        console.log(this.name + ' ' + this.lastName);
+    },
+
     example: function () {
         // ссылается на текущий объект
         console.log(this);
@@ -37,3 +51,4 @@ let obj2 = {
 }
 
 obj2.example()
+// obj2.getFullName()

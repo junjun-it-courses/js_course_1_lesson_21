@@ -13,5 +13,6 @@ function example(a, b) {
     console.log(this, a, b);
 }
 
+// example(100, 200);
 example.apply(someObj, someArrayOfArguments)
-example.apply(someObj, ['str1', 'str2'])
+// example.apply(someObj, ['str1', 'str2'])

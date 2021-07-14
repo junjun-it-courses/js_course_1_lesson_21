@@ -14,4 +14,9 @@ function example(a, b) {
 
 const exampleWithContext = example.bind(someObj, 'string1', 'string2');
 
-// exampleWithContext();
+// console.log(exampleWithContext, typeof(exampleWithContext))
+
+exampleWithContext();
+example();
+
+console.log(exampleWithContext === example)

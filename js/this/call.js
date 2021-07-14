@@ -1,35 +1,36 @@
 // Метод call() вызывает функцию с указанным значением this и индивидуально
 // предоставленными аргументами.
 
-let someObj = {
-    firstName: 'Ihor',
-    lastName: 'Cat'
-}
-
-function example(a, b) {
-    console.log(this, a, b);
-}
-
+// let someObj = {
+//     firstName: 'Ihor',
+//     lastName: 'Cat'
+// }
+//
+// function example(a, b) {
+//     console.log(this, a, b);
+// }
+//
+// // example(1, 2);
+//
 example.call(someObj, 200, 100)
 
 
-
-
-
-// В качестве первого аргумента методов call или apply может быть передан объект,
+// В качестве первого аргумента методов call может быть передан объект,
 // на который будет указывать this.
 // let obj = {a: 'Custom'};
 //
 // // Это свойство принадлежит глобальному объекту
-// let a = 'Global';
+// var a = 'Global';
+// // console.log(window.a)
+//
 //
 // function whatsThis() {
 //     return this.a;  //значение this зависит от контекста вызова функции
 //
 // }
 //
-// whatsThis();          // 'Global'
-// whatsThis.call(obj);  // 'Custom'
+// console.log(whatsThis());          // 'Global'
+// console.log(whatsThis.call(obj));  // 'Custom'
 
 
 // function add(c, d) {
@@ -41,4 +42,4 @@ example.call(someObj, 200, 100)
 // // Первый параметр - это объект для использования в качестве
 // // 'this', последующие параметры передаются как
 // // аргументы функции call
-// add.call(o, 5, 7); // 16
+// console.log(add.call(o, 5, 7)); // 16
